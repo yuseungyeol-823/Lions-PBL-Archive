@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+gen/
+
+# 빌드 결과물 (매우 중요: 용량이 커서 올리면 안 됨)
+build/
+target/
+.gradle/
+
+# 기타
+*.class
+*.log
