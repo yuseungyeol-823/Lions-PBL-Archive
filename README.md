@@ -71,7 +71,6 @@ CREATE DATABASE likelion_pbl CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 ## 🏗️ 프로젝트 구조 (Project Structure)
 
-```text
 src/main/java/lionSpringBoot/demo/
 ├── 📂 member/
 │   ├── 📂 controller/   # MemberController (HTTP 요청 매핑, 불필요한 null 분기 로직 제거)
@@ -88,5 +87,5 @@ src/main/java/lionSpringBoot/demo/
 │   └── 📂 dto/          # 과제 작성을 위한 Request DTO 및 회원 정보를 결합한 AssignmentResponse
 │
 └── 📂 global/           # 공통 에러 핸들링 및 전역 아키텍처 패키지
-    ├── 📂 exception/    # @RestControllerAdvice 기반 전역 관제탑(GlobalExceptionHandler) 및 커스텀 예외 클래스
-    └── 📂 dto/          # 예외 발생 시 클라이언트에게 일관된 서식으로 내려줄 공통 ErrorResponse 상자
+├── 📂 exception/    # @RestControllerAdvice 기반 전역 관제탑(GlobalExceptionHandler) 및 커스텀 예외 클래스
+└── 📂 dto/          # 예외 발생 시 클라이언트에게 일관된 서식으로 내려줄 공통 ErrorResponse 상자
