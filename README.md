@@ -30,20 +30,7 @@ cd <프로젝트 폴더명>
 로컬 MySQL에 접속하여 본 애플리케이션이 사용할 데이터베이스 스키마를 생성합니다.
 CREATE DATABASE likelion_pbl CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-### 3. 환경 변수 및 로컬 DB 설정 (application.yaml)
-src/main/resources/application.yaml 경로에서 본인의 로컬 MySQL 접속 정보(username, password)를 수정합니다.
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/likelion_pbl?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
-    username: root        # 본인의 MySQL 계정명
-    password: password    # 본인의 MySQL 비밀번호
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-
-### 4. 애플리케이션 구동
+### 3. 애플리케이션 구동
 터미널에서 프로젝트 루트 경로로 이동한 뒤, 아래 명령어를 통해 프로젝트를 빌드하고 구동합니다.
 * Linux / macOS: ./gradlew bootRun
 * Windows: ./gradlew.bat bootRun
