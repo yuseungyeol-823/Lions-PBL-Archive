@@ -71,6 +71,7 @@ CREATE DATABASE likelion_pbl CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 ## 🏗️ 프로젝트 구조 (Project Structure)
 
+```text
 src/main/java/lionSpringBoot/demo/
 ├── 📂 member/
 │   ├── 📂 controller/   # MemberController (HTTP 요청 매핑, 불필요한 null 분기 로직 제거)
