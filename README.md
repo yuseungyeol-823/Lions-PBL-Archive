@@ -71,21 +71,22 @@ CREATE DATABASE likelion_pbl CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 ## 🏗️ 프로젝트 구조 (Project Structure)
 
+```text
 src/main/java/lionSpringBoot/demo/
-├── 📂 member/
-│   ├── 📂 controller/   # MemberController (HTTP 요청 매핑, 불필요한 null 분기 로직 제거)
-│   ├── 📂 service/      # MemberService (회원 등록·조회·수정·삭제 비즈니스 로직, 예외 발생 시 throw)
-│   ├── 📂 repository/   # MemberRepository (Spring Data JPA 인터페이스, findByPart 등 확장)
-│   ├── 📂 domain/       # Member 엔티티 객체 및 RoleType(LION/STAFF) Enum 클래스
-│   └── 📂 dto/          # Lion/Staff 생성 및 수정을 위한 Request DTO 및 통합 Response DTO
+├── 📂 member
+│   ├── 📂 controller    # MemberController (HTTP 요청 매핑, 불필요한 null 분기 로직 제거)
+│   ├── 📂 service       # MemberService (회원 등록·조회·수정·삭제 비즈니스 로직, 예외 발생 시 throw)
+│   ├── 📂 repository    # MemberRepository (Spring Data JPA 인터페이스, findByPart 등 확장)
+│   ├── 📂 domain        # Member 엔티티 객체 및 RoleType(LION/STAFF) Enum 클래스
+│   └── 📂 dto           # Lion/Staff 생성 및 수정을 위한 Request DTO 및 통합 Response DTO
 │
-├── 📂 assignment/
-│   ├── 📂 controller/   # AssignmentController (전체 과제 조회 및 Containing 검색 API 구현)
-│   ├── 📂 service/      # AssignmentService (과제 영속성 제어 및 예외 검증 로직 처리)
-│   ├── 📂 repository/   # AssignmentRepository (JPA 쿼리 메서드 findByTitleContaining 탑재)
-│   ├── 📂 domain/       # Assignment 엔티티 객체 (Member 엔티티와 N:1 다대일 외래키 연관관계 형성)
-│   └── 📂 dto/          # 과제 작성을 위한 Request DTO 및 회원 정보를 결합한 AssignmentResponse
+├── 📂 assignment
+│   ├── 📂 controller    # AssignmentController (전체 과제 조회 및 Containing 검색 API 구현)
+│   ├── 📂 service       # AssignmentService (과제 영속성 제어 및 예외 검증 로직 처리)
+│   ├── 📂 repository    # AssignmentRepository (JPA 쿼리 메서드 findByTitleContaining 탑재)
+│   ├── 📂 domain        # Assignment 엔티티 객체 (Member 엔티티와 N:1 다대일 외래키 연관관계 형성)
+│   └── 📂 dto           # 과제 작성을 위한 Request DTO 및 회원 정보를 결합한 AssignmentResponse
 │
-└── 📂 global/           # 공통 에러 핸들링 및 전역 아키텍처 패키지
-├── 📂 exception/    # @RestControllerAdvice 기반 전역 관제탑(GlobalExceptionHandler) 및 커스텀 예외 클래스
-└── 📂 dto/          # 예외 발생 시 클라이언트에게 일관된 서식으로 내려줄 공통 ErrorResponse 상자
+└── 📂 global            # 공통 에러 핸들링 및 전역 아키텍처 패키지
+    ├── 📂 exception     # @RestControllerAdvice 기반 전역 관제탑(GlobalExceptionHandler) 및 커스텀 예외 클래스
+    └── 📂 dto           # 예외 발생 시 클라이언트에게 일관된 서식으로 내려줄 공통 ErrorResponse 상자 
